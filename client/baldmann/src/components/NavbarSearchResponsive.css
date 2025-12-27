@@ -1,0 +1,80 @@
+.navbar-search-desktop {
+  display: flex;
+}
+
+.navbar-search-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .navbar-search-desktop {
+    display: none !important;
+  }
+
+  .navbar-search-mobile {
+    display: flex !important;
+  }
+}
+
+/* laptop view: show a compact inline search bar so the BaldMann title remains visible */
+@media (min-width: 1024px) and (max-width: 1600px) {
+
+  /* Show desktop inline search (compact), hide the icon */
+  .navbar-search-desktop {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    max-width: 700px !important;
+    justify-content: flex-start !important;
+  }
+
+  .navbar-search-mobile {
+    display: none !important;
+  }
+
+  /* Tighten the search bar and remove extra vertical space inside navbar */
+  .navbar-search-desktop .responsive-search-bar {
+    max-width: 700px !important;
+    margin: 0 !important;
+  }
+
+  .navbar-search-desktop .responsive-search-input {
+    min-width: 200px !important;
+    font-size: 16px !important;
+    padding: 10px 36px 10px 14px !important;
+  }
+
+  /* Reduce the search icon size */
+  .navbar-search-desktop svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+/* Inline search bar placed next to the Home link in the navbar */
+
+.navbar-inline-search {
+  display: flex;
+  align-items: center;
+  max-width: 480px;
+}
+
+.navbar-inline-search .responsive-search-bar {
+  margin: 0;
+  max-width: 480px;
+}
+
+@media (max-width: 800px) {
+
+  /* Optionally hide the inline search on small screens so the menu fits */
+  .navbar-inline-search {
+    display: none;
+  }
+}
+
+.navbar-search-desktop .responsive-search-bar {
+  max-width: 700px;
+}
+
+.navbar-search-desktop .responsive-search-input {
+  width: 100%;
+}

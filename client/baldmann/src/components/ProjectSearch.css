@@ -1,0 +1,49 @@
+.responsive-search-bar {
+  width: 100%;
+  max-width: 600px;
+}
+
+.responsive-search-input {
+  min-width: 200px;
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .responsive-search-bar {
+    max-width: 95vw;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  .responsive-search-input {
+    min-width: 120px;
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-search-bar {
+    max-width: 99vw;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .responsive-search-input {
+    min-width: 60px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 32px;
+  }
+}
+
+/* Laptop view: make the search bar narrower on typical laptop widths */
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .responsive-search-bar {
+    /* Override inline max-width in JSX */
+    max-width: 420px !important;
+  }
+  .responsive-search-input {
+    /* Override inline min-width in JSX */
+    min-width: 260px !important;
+  }
+}

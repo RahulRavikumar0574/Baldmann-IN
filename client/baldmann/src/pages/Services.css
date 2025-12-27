@@ -1,0 +1,353 @@
+.services-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 5% 60px;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.services-title span {
+  color: #FFD700;
+}
+
+.services-subtitle {
+  font-size: 1.4rem;
+  color: #bbb;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.service-card:hover::before {
+  opacity: 0.1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: #FFD700;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  color: #FFD700;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.service-features li {
+  font-size: 0.95rem;
+  color: #ddd;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.service-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.service-request-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 20px;
+  border: 2px solid #333;
+}
+
+.request-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.request-title span {
+  color: #FFD700;
+}
+
+.request-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #0a0a0a;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Varela Round", serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.services-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.checkbox-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: #0a0a0a;
+  border: 1px solid #333;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #FFD700;
+}
+
+.checkbox-item:hover {
+  border-color: #FFD700;
+  background-color: #111;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #000;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: "Varela Round", serif;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+.success-message {
+  text-align: center;
+  color: #4CAF50;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 10px;
+  border: 1px solid #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 80px 4% 40px;
+  }
+
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .services-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-request-section {
+    padding: 40px 20px;
+  }
+
+  .request-title {
+    font-size: 2rem;
+  }
+
+  .request-subtitle {
+    font-size: 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-checkbox-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .submit-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .request-title {
+    font-size: 1.8rem;
+  }
+}
